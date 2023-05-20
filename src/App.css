@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  height: 900px;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.topBar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headerStyle {
+  background-color: whitesmoke;
+  /*border-bottom: 1px solid #ddd;*/
+}
+
+.topBar a {
+  margin: 0 20px 0 0;
+  color: #282c34;
+  font-size: 20px;
+}
