@@ -1,5 +1,5 @@
 import "../App.css";
-import {Route, Routes, BrowserRouter as Router} from 'react-router-dom';
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { Layout } from "antd";
 import TopBar from "./TopBar";
 import Home from "./Home";
@@ -13,20 +13,20 @@ const { Header, Footer, Content } = Layout;
 function App() {
 	return (
 		<>
-			<Layout>
+			<Layout className='layout'>
 				<Router>
-					<Header className="headerStyle">
+					<Header className='headerStyle'>
 						<TopBar />
 					</Header>
 					<Content>
 						<Routes>
-							<Route path="/" element={<Home />} />
+							<Route path='/' element={<Home />} />
 							{/*<Route path="/works" element={<HowItWorks />} />*/}
 							{/*<Route path="/about" element={<AboutAs />} />*/}
-							<Route path="/donate" element={<DonateToys />} />
-							<Route path="/rental" element={<Rental />} />
+							<Route path='/donate' element={<DonateToys />} />
+							<Route path='/rental' element={<Rental />} />
 							{/*<Route path="/contact" element={<Contact />} />*/}
-							<Route path="/faq" element={<FAQ />} />
+							<Route path='/faq' element={<FAQ />} />
 						</Routes>
 					</Content>
 				</Router>
