@@ -2,7 +2,9 @@ import React from 'react';
 
 const FooterInfo = () => {
     return (
-        <div>Copyright</div>
+        <div className="container">
+            <div className="copyright">©2023 Created by Mateusz-11 & JolantaWro</div>
+        </div>
     );
 };
 
