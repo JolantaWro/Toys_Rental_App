@@ -146,7 +146,6 @@ Contact
 
 .containerContact {
 	margin: 100px 0 100px 0;
-
 }
 
 .containerContact input,
@@ -159,3 +158,43 @@ Contact
 	background-color: pink;
 }
 
+/*
+How it works
+------------
+*/
+
+.commcontainer h2 {
+	font-weight: 700;
+	font-size: 38px;
+	margin: 30px 0;
+}
+.howitworksblock .ant-row {
+	height: 300px;
+}
+
+.howitworksblock .ant-row div {
+	background-repeat: no-repeat;
+	height: 200px;
+	z-index: 2;
+}
+
+.howitworksblock .ant-col div:hover,
+.howitworksblock .ant-col div:focus {
+	-ms-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+	transition: all 0.5s;
+}
+
+.ant-row .ant-col span {
+	font-weight: 400;
+	font-size: 20px;
+	margin-top: 20px;
+	position: relative;
+}
+
+h2 {
+	text-align: center;
+}
