@@ -125,3 +125,37 @@ About Us
 	color: #2f2f2f;
 	font-size: 16px;
 }
+
+/*
+Contact
+------------
+*/
+
+.contactBlock {
+	height: 400px;
+	margin: 100px 0 100px 0;
+}
+
+.contactBlock h2 {
+	display: flex;
+	justify-content: center;
+	background-image: url("./assets/img/decoration.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.containerContact {
+	margin: 100px 0 100px 0;
+
+}
+
+.containerContact input,
+.containerContact textarea {
+	border: none;
+	border-bottom: 1px solid;
+}
+
+.containerContact button {
+	background-color: pink;
+}
+
