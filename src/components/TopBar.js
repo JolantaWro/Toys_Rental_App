@@ -8,11 +8,11 @@ const TopBar = () => {
             <div className="container">
                 <div className="topBar">
                     <Link to='/#start'>Start</Link>
-                    <Link to='/#works'>O co chodzi</Link>
-                    <Link to='/#about'>O nas</Link>
-                    <NavLink to="/donate">Przekaż zabawki</NavLink>
-                    <NavLink to="/rental">Wypożyczalnia</NavLink>
-                    <Link to='/#contact'>Kontakt</Link>
+                    <Link to='/#works'>Our stories</Link>
+                    <Link to='/#about'>About as</Link>
+                    <NavLink to="/donate">Donate Toys</NavLink>
+                    <NavLink to="/rental">Rent Toys</NavLink>
+                    <Link to='/#contact'>Contact</Link>
                     <NavLink to="/faq">FAQ</NavLink>
                 </div>
             </div>
