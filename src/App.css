@@ -133,19 +133,19 @@ Contact
 
 .contactBlock {
 	height: 400px;
+	width: 900px;
 	margin: 100px 0 100px 0;
 }
 
-.contactBlock h2 {
-	display: flex;
-	justify-content: center;
-	background-image: url("./assets/img/decoration.svg");
-	background-repeat: no-repeat;
-	background-size: contain;
+.contactBlock img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
 
 .containerContact {
-	margin: 100px 0 100px 0;
+	margin: 20px 0 100px 250px;
 }
 
 .containerContact input,
@@ -156,6 +156,7 @@ Contact
 
 .containerContact button {
 	background-color: pink;
+	color: #2f2f2f;
 }
 
 /*
