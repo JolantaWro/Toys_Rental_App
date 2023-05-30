@@ -199,3 +199,47 @@ How it works
 h2 {
 	text-align: center;
 }
+
+/*
+Donate
+------------
+*/
+
+
+.donateHeader {
+	background-image: url("assets/img/donateWall.jpg");
+	background-repeat: no-repeat;
+	height: 400px;
+}
+
+.donateHeader h2 {
+	color: saddlebrown;
+}
+
+.donateHeader h3 {
+	font-weight: 700;
+	font-size: 25px;
+	text-align: center;
+	color: saddlebrown;
+}
+
+.donateContent {
+	align-items: center;
+	margin: 100px 0 30px 400px;
+	display: flex;
+
+}
+
+.donateContent img {
+	width: 200px;
+	margin: 30px;
+}
+
+.donateContent h3 {
+	width: 300px;
+}
+
+.donateForm{
+	margin: 100px 0 100px 250px;
+}
+
