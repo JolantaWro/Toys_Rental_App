@@ -2,9 +2,9 @@ import React from "react";
 
 const Start = () => {
 	return (
-		<div className='holder hero commcontainer'>
-			<h3>Wypożyczalnia zabawek ToysRental</h3>
-			<h4>Dzięki nam nie musisz magazynować zbędnych zabawek!</h4>
+		<div className='hero'>
+			<h1 className='hero__title'>ToysRental</h1>
+			<h2>Thanks to us, you don't have to store unnecessary toys!</h2>
 		</div>
 	);
 };
