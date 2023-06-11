@@ -1,135 +1,285 @@
-.App {
-	text-align: center;
+:root {
+	--main-bg-color: #f3f4f9;
+	/* --second-bg-color: rgb(90, 184, 98); */
+	--third-bg-color: #fff;
+	--main-color: #2b2b29;
+	--decor-color: rgba(148, 148, 148, 0.212);
+	--second-color: #ff5d00;
+	/* --second-color: #e65a0a; */
+	--third-color: #fff;
+	--font-family-main: "Poppins", sans-serif;
+	--font-size--main: 18px;
+	--font-size--hero: 2.5rem;
+	--font-size--hero2: 1.6rem;
+	--font-size--title: 2rem;
+	--font-weight--main: 400;
+	--font-weight--hero: 700;
+	--font-line-height: 1.6;
+	--border-radius: 40px;
+	--border-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+	--text-shadow-hero: 2px 2px 2px #161616;
 }
 
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
-}
+/*  ----------------------------
 
-.App-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
-}
+    LAYOUT
 
-.App-link {
-	color: #61dafb;
-}
+----------------------------  */
 
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+.layout {
+	background: var(--main-bg-color);
 }
 
 .container {
 	max-width: 1170px;
 	padding: 0 15px;
 	margin: 0 auto;
-	font-family: "Poppins", sans-serif;
-	color: #2f2f2f;
-	font-size: 16px;
+	font-family: var(--font-family-main);
+	color: var(--main-color);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--main);
 }
 
-.container h3 {
-	font-weight: 700;
-	font-size: 38px;
-	margin: 0;
+/*  ----------------------------
+
+    TOP HEADER
+
+----------------------------  */
+
+.user-panel {
+	display: flex;
+	justify-content: space-between;
 }
 
-.container h4 {
-	font-weight: 400;
-	font-size: 25px;
+.user-panel .user-panel__logo-img {
+	width: 40px;
+}
+
+.user-panel .user-panel__logo-name {
+	font-weight: var(--font-weight--hero);
+	font-size: var(--font-size--hero2);
+	margin-left: 10px;
 }
 
 .topBar {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-around;
+	border-bottom: 1px solid var(--decor-color);
 }
 
 .headerStyle {
-	background-color: whitesmoke;
-	/*border-bottom: 1px solid #ddd;*/
+	background-color: var(--main-bg-color);
+	/* background-color: red; */
+	height: 120px;
 }
 
 .topBar a {
 	margin: 0 20px 0 0;
-	color: #282c34;
+	color: var(--main-color);
 	font-size: 20px;
+	font-weight: var(--font-weight--hero);
 }
 
-.layout {
-	background: #ffffff;
+.topBar a:hover {
+	color: var(--second-color);
 }
 
-.holder {
-	background: #f9f9f9;
-	/* border: 1px solid #ddd; */
+/*  ----------------------------
+
+    HERO
+
+----------------------------  */
+.hero {
+	margin-top: 130px;
 	height: 427px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 30px 30px 30px 50%;
-}
-
-.commcontainer {
-	margin: 40px 0;
-}
-
-/* 
-hero
-------------
-*/
-.holder.hero {
-	background-image: url("./assets/img/toysrental-hero3-r.png");
+	align-items: center;
+	background-image: url("./assets/img/toysrental-hero2.png");
 	background-repeat: no-repeat;
+	border-radius: var(--border-radius);
+	box-shadow: var(--border-shadow);
 }
-.ant-col h2 {
-	font-weight: 700;
-	font-size: 38px;
-	margin: 0;
+.hero .hero__title {
+	color: var(--third-color);
+	font-size: var(--font-size--hero);
+	font-weight: var(--font-weight--hero);
+	text-shadow: var(--text-shadow-hero);
 }
-/* 
-About Us
-------------
-*/
-.aboutusblock {
+
+.hero h2 {
+	color: var(--second-color);
+	font-size: var(--font-size--hero2);
+	font-weight: var(--font-weight--hero);
+	text-shadow: var(--text-shadow-hero);
+}
+
+/*  ----------------------------
+
+    COMMON SECTIONS
+
+----------------------------  */
+
+.holder {
+	height: auto;
+}
+
+.holder p {
+	font-family: var(--font-family-main);
+	color: var(--main-color);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--main);
+	line-height: var(--font-line-height);
+}
+
+.holder .holder__title {
+	font-size: var(--font-size--title);
+	font-weight: var(--font-weight--hero);
+	padding: 100px 0 50px 0;
+	text-align: center;
+	color: var(--primary-color);
+}
+
+.holder .holder__title .holder__title--highlight {
+	color: var(--second-color);
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--second-color);
+	width: 250px;
+	height: 40px;
+	margin-top: 20px;
+	font-family: var(--font-family-main);
+	color: var(--second-color);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--hero);
+	line-height: var(--font-line-height);
+	transition: 0.6s;
+}
+
+.button:hover {
+	background-color: var(--second-color);
+	color: var(--third-color);
+	border: 1px solid white;
+}
+
+/*  ----------------------------
+
+    HOW IT WORKS
+
+----------------------------  */
+
+/* .howitworks {
+} */
+
+.howitworks .ant-row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+
+.howitworks .ant-col {
+	padding: 0 5px;
+}
+
+.howitworks .howitworks__item {
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.howitworks .howitworks__item .howitworks__img {
 	height: 400px;
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+}
+
+.howitworks .howitworks__item .howitworks__img:hover {
+	transform: scale(0.95);
+}
+
+.howitworks__item .howitworks__description {
+	background-color: var(--third-bg-color);
+	font-family: var(--font-family-main);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--hero);
+	color: var(--main-color);
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/*  ----------------------------
+
+    ABOUT US
+
+----------------------------  */
+
+.aboutusblock {
+	background-color: var(--third-bg-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--border-shadow);
 }
 .aboutusblock .ant-col:first-of-type {
-	background-image: url("./assets/img/aboutus-r.png");
+	background-image: url("./assets/img/about-us.png");
 	background-repeat: no-repeat;
+	border-radius: var(--border-radius) 0 0 var(--border-radius);
 }
 
 .aboutusblock .ant-col:nth-last-of-type(1) {
-	padding: 70px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 35px 50px;
 }
 
-.aboutusblock p {
-	font-family: "Poppins", sans-serif;
-	color: #2f2f2f;
-	font-size: 16px;
+/*  ----------------------------
+
+    OUR OFFER
+
+----------------------------  */
+
+.ouroffer {
+	background-color: var(--third-bg-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--border-shadow);
+}
+.ouroffer .ant-col:first-of-type {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 35px 50px;
 }
 
-/*
-Contact
-------------
-*/
+.ouroffer .ant-col:nth-last-of-type(1) {
+	background-image: url("./assets/img/our-offer.png");
+	background-repeat: no-repeat;
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
+	height: 500px;
+}
+
+.ouroffer .ouroffer__title {
+	font-family: var(--font-family-main);
+	font-size: var(--font-size--hero2);
+	font-weight: var(--font-weight--hero);
+	color: var(--main-color);
+}
+
+/*  ----------------------------
+
+    CONTACT
+
+----------------------------  */
 
 .contactBlock {
 	height: 400px;
@@ -159,52 +309,23 @@ Contact
 	color: #2f2f2f;
 }
 
-/*
-How it works
-------------
-*/
-
-.commcontainer h2 {
-	font-weight: 700;
-	font-size: 38px;
-	margin: 30px 0;
-}
-.howitworksblock .ant-row {
-	height: 300px;
+.contactBlock .ant-form button span {
+	margin-top: 0;
 }
 
-.howitworksblock .ant-row div {
-	background-repeat: no-repeat;
-	height: 200px;
-	z-index: 2;
+.contactBlock .ant-form button {
+	background-color: rgb(99, 99, 99);
 }
 
-.howitworksblock .ant-col div:hover,
-.howitworksblock .ant-col div:focus {
-	-ms-transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	-o-transform: scale(1.1);
-	transform: scale(1.1);
-	transition: all 0.5s;
+.contactBlock .ant-form button:hover {
+	background-color: rgb(4, 104, 236);
 }
 
-.ant-row .ant-col span {
-	font-weight: 400;
-	font-size: 20px;
-	margin-top: 20px;
-	position: relative;
-}
+/*  ----------------------------
 
-h2 {
-	text-align: center;
-}
+    DONATE
 
-/*
-Donate
-------------
-*/
-
+----------------------------  */
 
 .donateHeader {
 	background-image: url("assets/img/donateWall.jpg");
@@ -227,7 +348,6 @@ Donate
 	align-items: center;
 	margin: 100px 0 30px 400px;
 	display: flex;
-
 }
 
 .donateContent img {
@@ -239,7 +359,18 @@ Donate
 	width: 300px;
 }
 
-.donateForm{
+.donateForm {
 	margin: 100px 0 100px 250px;
 }
 
+/*  ----------------------------
+
+    CATEGORY
+
+----------------------------  */
+
+.category {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
