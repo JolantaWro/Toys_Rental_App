@@ -3,6 +3,7 @@ import contact from "../assets/img/contact.png";
 import { Button, Form, Input, Modal, Result } from "antd";
 import { useNavigate } from "react-router-dom";
 import EmailService from "../services/email-service";
+import { Col, Row } from "antd";
 
 const Contact = () => {
 	const [isNoteOpen, setIsNoteOpen] = useState(false);
@@ -36,11 +37,13 @@ const Contact = () => {
 	};
 
 	return (
-		<div className='contactBlock'>
-			<img src={contact} />
+		<div className='holder '>
+			<h2 className='holder__title'>
+				Contact <span className='holder__title--highlight'>Us</span>
+			</h2>
 
 			<Form
-				className='containerContact'
+				className='contact__form'
 				name='basic'
 				labelCol={{
 					span: 8,
@@ -49,7 +52,7 @@ const Contact = () => {
 					span: 16,
 				}}
 				style={{
-					maxWidth: 600,
+					maxWidth: 700,
 				}}
 				initialValues={{
 					remember: true,
@@ -58,7 +61,7 @@ const Contact = () => {
 				onFinishFailed={onFinishFailed}
 				autoComplete='off'>
 				<Form.Item
-					label='Name'
+				// label='Name'
 					name='to_name'
 					rules={[
 						{
@@ -66,11 +69,10 @@ const Contact = () => {
 							message: "Please input your name",
 						},
 					]}>
-					<Input placeholder='Name' />
+					<Input placeholder='Name' className="button" />
 				</Form.Item>
 
 				<Form.Item
-					// label="Email"
 					name='from_name'
 					rules={[
 						{
@@ -79,11 +81,10 @@ const Contact = () => {
 							type: "email",
 						},
 					]}>
-					<Input placeholder='Email' />
+					<Input placeholder='Email' className="button"/>
 				</Form.Item>
 
 				<Form.Item
-					// label="Message"
 					name='message'
 					rules={[
 						{
@@ -92,8 +93,9 @@ const Contact = () => {
 						},
 					]}>
 					<Input.TextArea
+						className="button"
 						placeholder='Message ...'
-						autoSize={{ minRows: 2, maxRows: 6 }}
+						autoSize={{ minRows: 4, maxRows: 8 }}
 					/>
 				</Form.Item>
 
@@ -102,7 +104,7 @@ const Contact = () => {
 						offset: 8,
 						span: 16,
 					}}>
-					<Button type='primary' htmlType='submit'>
+					<Button type='primary' htmlType='submit' className="button button--state-active">
 						Submit
 					</Button>
 				</Form.Item>

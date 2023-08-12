@@ -66,26 +66,25 @@
 	margin-left: 10px;
 }
 
-.topBar {
+.topbar {
 	display: flex;
 	justify-content: space-around;
 	border-bottom: 1px solid var(--decor-color);
 }
 
-.headerStyle {
+.topbar--background--color--main {
 	background-color: var(--main-bg-color);
-	/* background-color: red; */
 	height: 120px;
 }
 
-.topBar a {
+.topbar__link {
 	margin: 0 20px 0 0;
 	color: var(--main-color);
 	font-size: 20px;
 	font-weight: var(--font-weight--hero);
 }
 
-.topBar a:hover {
+.topbar__link:hover {
 	color: var(--second-color);
 }
 
@@ -281,44 +280,42 @@
 
 ----------------------------  */
 
-.contactBlock {
+
+/* .contact {
 	height: 400px;
 	width: 900px;
-	margin: 100px 0 100px 0;
-}
+} */
 
-.contactBlock img {
+/* .contact--background--photo {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	width: 35%;
+} */
+
+
+.contact__form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 }
 
-.containerContact {
-	margin: 20px 0 100px 250px;
+#basic_message {
+	display: inline;
 }
 
-.containerContact input,
-.containerContact textarea {
-	border: none;
-	border-bottom: 1px solid;
+.contact__item {
+	margin: 0 auto;
 }
 
-.containerContact button {
-	background-color: pink;
-	color: #2f2f2f;
+
+.contact__form .button--state-active {
+	background-color: var(--third-bg-color)
 }
 
-.contactBlock .ant-form button span {
-	margin-top: 0;
-}
-
-.contactBlock .ant-form button {
-	background-color: rgb(99, 99, 99);
-}
-
-.contactBlock .ant-form button:hover {
-	background-color: rgb(4, 104, 236);
+.contact__form .button--state-active:hover {
+	background-color: var(--second-color);
 }
 
 /*  ----------------------------
