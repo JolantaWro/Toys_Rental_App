@@ -6,7 +6,7 @@ const AboutAs = () => {
 	return (
 		<div className='holder'>
 			<h2 className='holder__title'>
-				About <span className='holder__title--highlight'>us</span>{" "}
+				About <span className='holder__title--highlight'>us</span>
 			</h2>
 			<div className='aboutusblock'>
 				<Row>
@@ -15,7 +15,7 @@ const AboutAs = () => {
 						<p>
 							We are a <strong>toy rental company</strong>. If you are tired of
 							storing unnecessary toys, use our services and rent them for a
-							specific time. We have almost{" "}
+							specific time. We have almost
 							<strong>100 different brands</strong> to choose from like: dolls &
 							statues, figures, baby products... Just look at the list of
 							products! Join hundreds of our satisfied customers. Rent a toy for

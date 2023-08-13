@@ -1,43 +1,82 @@
 import React from "react";
-import { Image } from "antd";
-import packToys from "../assets/img/packToys.png";
-import sendToys from "../assets/img/sendToys.png";
 import DonateForm from "./DonateForm";
+import { Col, Row } from "antd";
+import { HashLink as Link } from "react-router-hash-link";
 
 const DonateToys = () => {
 	return (
-		<div className=''>
-			<div className='donateHeader'>
-				<h2>Let's start donate</h2>
-				<h3>
-					Donate your toys using our free collection service. With safety
-					measures in place, donating your unwanted items couldn't be easier.
-				</h3>
+		<>
+			<div className='container'>
+				<div className='holder'>
+					<h2 className='holder__title'>
+						Donate <span className='holder__title--highlight'>Toys</span>
+					</h2>
+					<div className='donatetoys'>
+						<div className='donatetoys__block'>
+							<Row>
+								<Col span={12}></Col>
+								<Col span={12}>
+									<p>
+										Donate your toys using our
+										<strong> free collection service</strong>. With safety
+										measures in place, donating your unneeded items couldn't be
+										easier.
+									</p>
+									<Link to='#donate-form' className='button'>
+										I want to send a donation
+									</Link>
+								</Col>
+							</Row>
+						</div>
+					</div>
+				</div>
+				<div className='holder'>
+					<h2 className='holder__title'>
+						How it <span className='holder__title--highlight'>works?</span>
+					</h2>
+					<div className='donatetoys'>
+						<div className='donatetoys__row'>
+							<Row>
+								<Col span={8}>
+									<div className='donatetoys__row donatetoys__section--number'>
+										01
+									</div>
+									<div className='donatetoys__row donatetoys__section--description'>
+										Make a list of toys you want to donate.
+									</div>
+								</Col>
+								<Col span={8}>
+									<div className='donatetoys__row donatetoys__section--number'>
+										02
+									</div>
+									<div className='donatetoys__row donatetoys__section--description'>
+										Select a transport date, and send us an application.
+									</div>
+								</Col>
+								<Col span={8}>
+									<div className='donatetoys__row donatetoys__section--number'>
+										03
+									</div>
+									<div className='donatetoys__row donatetoys__section--description'>
+										Pack toys in cardboard boxes and we'll take care of the
+										rest.
+									</div>
+								</Col>
+							</Row>
+						</div>
+					</div>
+				</div>
+				<div className='holder'>
+					<h2 className='holder__title'>
+						Ready to donate your toys?{" "}
+						<span className='holder__title--highlight'>Let's start!</span>
+					</h2>
+					<div id='donate-form' className='donatetoys'>
+						<DonateForm />
+					</div>
+				</div>
 			</div>
-			<h2>How it works</h2>
-			<div className='donateContent'>
-				<h3>
-					Make a list of toys you want to donate. Select a transform date, and
-					send us an application.{" "}
-				</h3>
-				<img src={sendToys} />
-				{/*<Image*/}
-				{/*    width={200}*/}
-				{/*    src={listToys}*/}
-				{/*/>*/}
-				<h3>
-					Pack toys in cardboard boxes or bags and we'll take care of the rest.
-				</h3>
-				<img src={packToys} />
-				{/*<Image*/}
-				{/*    width={200}*/}
-				{/*    src={packToys}*/}
-			</div>
-			<div className='donateForm'>
-				<h2>Ready to donate your toys? Let's start</h2>
-				<DonateForm />
-			</div>
-		</div>
+		</>
 	);
 };
 

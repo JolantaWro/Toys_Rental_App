@@ -14,41 +14,49 @@ const HowItWorks = () => {
 			<div className='howitworks'>
 				<Row>
 					<Col span={6} className='howitworks__item'>
-						<div
-							className='howitworks__item howitworks__img'
-							style={{
-								backgroundImage: `url(${imgstep1})`,
-							}}></div>
+						<div className='howitworks__item'>
+							<div
+								className='howitworks__item howitworks__img'
+								style={{
+									backgroundImage: `url(${imgstep1})`,
+								}}></div>
+						</div>
 						<div className='howitworks__item howitworks__description'>
 							<span>Choose toys</span>
 						</div>
 					</Col>
 					<Col span={6} className='howitworks__item'>
-						<div
-							className='howitworks__item howitworks__img'
-							style={{
-								backgroundImage: `url(${imgstep2})`,
-							}}></div>
+						<div className='howitworks__item'>
+							<div
+								className='howitworks__item howitworks__img'
+								style={{
+									backgroundImage: `url(${imgstep2})`,
+								}}></div>
+						</div>
 						<div className='howitworks__item howitworks__description'>
 							<span>Send the order</span>
 						</div>
 					</Col>
 					<Col span={6} className='howitworks__item'>
-						<div
-							className='howitworks__item howitworks__img'
-							style={{
-								backgroundImage: `url(${imgstep3})`,
-							}}></div>
+						<div className='howitworks__item'>
+							<div
+								className='howitworks__item howitworks__img'
+								style={{
+									backgroundImage: `url(${imgstep3})`,
+								}}></div>
+						</div>
 						<div className='howitworks__item howitworks__description'>
 							<span>Pick up toys in our store</span>
 						</div>
 					</Col>
 					<Col span={6} className='howitworks__item'>
-						<div
-							className='howitworks__item howitworks__img'
-							style={{
-								backgroundImage: `url(${imgstep4})`,
-							}}></div>
+						<div className='howitworks__item'>
+							<div
+								className='howitworks__item howitworks__img'
+								style={{
+									backgroundImage: `url(${imgstep4})`,
+								}}></div>
+						</div>
 						<div className='howitworks__item howitworks__description'>
 							<span>Have fun with children</span>
 						</div>
