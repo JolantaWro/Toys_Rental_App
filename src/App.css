@@ -67,26 +67,30 @@
 	margin-left: 10px;
 }
 
-.topBar {
+.topbar {
 	display: flex;
 	justify-content: space-around;
 	border-bottom: 1px solid var(--decor-color);
 }
 
-.headerStyle {
+.topbar__header {
 	background-color: var(--main-bg-color);
-	/* background-color: red; */
 	height: 120px;
 }
 
-.topBar a {
+.topbar__link {
 	margin: 0 20px 0 0;
 	color: var(--main-color);
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: var(--font-weight--hero);
 }
 
-.topBar a:hover {
+.topbar__link--small {
+	font-size: 18px;
+	font-weight: var(--font-weight--main);
+}
+
+.topbar__link:hover {
 	color: var(--second-color);
 }
 
@@ -286,44 +290,57 @@
 
 ----------------------------  */
 
-.contactBlock {
-	height: 400px;
-	width: 900px;
-	margin: 100px 0 100px 0;
+.contact {
+	background-color: var(--third-bg-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--border-shadow);
 }
 
-.contactBlock img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
+.contact__content {
+	padding: 50px 50px;
 }
 
-.containerContact {
-	margin: 20px 0 100px 250px;
+.contact__title {
+	font-family: var(--font-family-main);
+	font-size: var(--font-size--hero2);
+	font-weight: var(--font-weight--hero);
+	color: var(--main-color);
 }
 
-.containerContact input,
-.containerContact textarea {
-	border: none;
-	border-bottom: 1px solid;
+
+.ant-form-item .ant-form-item-label >label {
+	font-size: var(--font-size--main);
 }
 
-.containerContact button {
-	background-color: pink;
-	color: #2f2f2f;
+
+.form__item {
+	border-radius: var(--border-radius);
+	border: 1px solid var(--main-color);
 }
 
-.contactBlock .ant-form button span {
-	margin-top: 0;
+.ant-input:focus, .ant-input:hover {
+	border-radius: var(--border-radius);
+	border: 1px solid var(--main-color);
 }
 
-.contactBlock .ant-form button {
-	background-color: rgb(99, 99, 99);
+
+.ant-form button {
+	background-color: #ffffff;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--second-color);
+	width: 150px;
+	height: 40px;
+	margin-left: 70px;
+	font-family: var(--font-family-main);
+	color: var(--second-color);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--hero);
+	line-height: var(--font-line-height);
 }
 
-.contactBlock .ant-form button:hover {
-	background-color: rgb(4, 104, 236);
+
+.ant-form .form__button:hover {
+	background-color: #ff5d00;
 }
 
 /*  ----------------------------

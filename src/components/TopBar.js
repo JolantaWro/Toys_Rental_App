@@ -13,18 +13,18 @@ const TopBar = () => {
 						<span className='user-panel__logo-name'>TOYS RENTAL</span>
 					</div>
 					<div>
-						<a>Logowanie</a>
-						<a>Rejestracja</a>
+						<a className="topbar__link topbar__link--small">Logowanie</a>
+						<a className="topbar__link topbar__link--small">Rejestracja</a>
 					</div>
 				</div>
-				<div className='topBar'>
-					<Link to='/#start'>Home</Link>
-					<Link to='/#works'>Our stories</Link>
-					<Link to='/#about'>About as</Link>
-					<NavLink to='/donate'>Donate Toys</NavLink>
-					<NavLink to='/rental'>Rent Toys</NavLink>
-					<Link to='/#contact'>Contact</Link>
-					<NavLink to='/faq'>FAQ</NavLink>
+				<div className='topbar'>
+					<Link to='/#start' className="topbar__link">Home</Link>
+					<Link to='/#works' className="topbar__link">Our stories</Link>
+					<Link to='/#about' className="topbar__link">About as</Link>
+					<NavLink to='/donate' className="topbar__link">Donate Toys</NavLink>
+					<NavLink to='/rental' className="topbar__link">Rent Toys</NavLink>
+					<Link to='/#contact' className="topbar__link">Contact</Link>
+					<NavLink to='/faq' className="topbar__link">FAQ</NavLink>
 				</div>
 			</div>
 		</>
