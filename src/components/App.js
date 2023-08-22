@@ -19,7 +19,7 @@ function App() {
 		<>
 			<Layout className='layout'>
 				<Router>
-					<Header className='headerStyle'>
+					<Header className='topbar__header'>
 						<TopBar />
 					</Header>
 					<Content>
