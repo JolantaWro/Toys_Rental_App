@@ -244,8 +244,9 @@
 .aboutusblock .ant-col:nth-last-of-type(1) {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding: 35px 50px;
+	height: 400px;
 }
 
 /*  ----------------------------
@@ -393,15 +394,114 @@
 
 /*  ----------------------------
 
-    CATEGORY
+	CATEGORY OF TOYS
 
 ----------------------------  */
 
-.category {
+.categories {
+	/* background-color: var(--third-bg-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--border-shadow); */
+	/* margin-top: 130px; */
+	height: 400px;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: last baseline;
+	align-items: end;
+	background-color: var(--third-bg-color);
+	background-image: url("./assets/img/about-us.png");
+	background-repeat: no-repeat;
+	border-radius: var(--border-radius);
+	box-shadow: var(--border-shadow);
+	padding: 100px 50px;
 }
+
+.categories .categories__title {
+	font-size: var(--font-size--title);
+	font-weight: var(--font-weight--hero);
+	/* padding: 100px 0 50px 0; */
+	text-align: left;
+	color: var(--primary-color);
+}
+
+.categories .categories__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--second-color);
+	width: 250px;
+	height: 40px;
+	font-family: var(--font-family-main);
+	color: var(--second-color);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--hero);
+	line-height: var(--font-line-height);
+	transition: 0.6s;
+}
+
+.categories .categories__link:hover {
+	background-color: var(--second-color);
+	color: var(--third-color);
+	border: 1px solid white;
+}
+
+.categories .categories__link_next {
+	margin-top: 110px;
+}
+
+.categories .categories__link__next {
+	padding: 20px 28px;
+	font-family: var(--font-family-main);
+	color: var(--main-color);
+	font-size: var(--font-size--hero2);
+	background-color: var(--third-bg-color);
+	border-radius: 50%;
+	box-shadow: var(--border-shadow);
+	/* margin-top?W: 100px; */
+}
+
+.categories .categories__link__next:hover {
+	color: var(--second-color);
+}
+
+/* .categories .ant-col:first-of-type {
+	background-image: url("./assets/img/about-us.png");
+	background-repeat: no-repeat;
+	border-radius: var(--border-radius) 0 0 var(--border-radius);
+	height: 400px;
+}
+
+.categories .ant-col:nth-last-of-type(1) {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 35px 50px;
+}
+
+.categories .ant-col:nth-last-of-type(1) .categories__list {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: end;
+	list-style: none;
+}
+
+.categories .ant-col:nth-last-of-type(1) .categories__list .categories__link {
+	font-family: var(--font-family-main);
+	font-size: var(--font-size--hero2);
+	font-weight: var(--font-weight--hero);
+	color: var(--main-color);
+}
+
+.categories
+	.ant-col:nth-last-of-type(1)
+	.categories__list
+	.categories__link:hover {
+	color: var(--second-color);
+} */
 
 /*  ----------------------------
 
