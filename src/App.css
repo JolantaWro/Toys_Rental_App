@@ -338,10 +338,10 @@
 	line-height: var(--font-line-height);
 }
 
-
-.ant-form .form__button:hover {
-	background-color: #ff5d00;
+.ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
+	background-color:var(--second-color)
 }
+
 
 /*  ----------------------------
 
@@ -455,4 +455,21 @@
 
 .ant-collapse-item {
 	margin: 15px 0;
+}
+
+
+/*  ----------------------------
+
+    FOOTER
+
+----------------------------  */
+
+
+.footer {
+	background: var(--main-bg-color);
+	margin: 30px 0;
+	display: flex;
+}
+.copyright {
+	font-size: var(--font-size--main);
 }

@@ -70,7 +70,7 @@ const DonateForm = () => {
                         },
                     ]}
                 >
-                    <Input placeholder="Niekoniecznie bezie potrzebna jak zrobimy logowanie" />
+                    <Input className="form__item" />
                 </Form.Item>
 
                 <Form.Item
@@ -84,7 +84,22 @@ const DonateForm = () => {
                         },
                     ]}
                 >
-                    <Input placeholder="Email"/>
+                    <Input className="form__item"/>
+                </Form.Item>
+
+                <Form.Item
+                    name="phone"
+                    label="Phone Number"
+                    rules={[
+                    {
+                        required: true,
+                        message: 'Please input your phone number!',
+                    },
+                    ]}
+                >
+                    <Input 
+                    className="form__item"
+                    />
                 </Form.Item>
 
                 <Form.Item
@@ -97,15 +112,15 @@ const DonateForm = () => {
                         },
                     ]}
                 >
-                    <Input placeholder="Zamiana na checkbox kategorii z bazy" />
+                    <Input className="form__item" />
                 </Form.Item>
 
                 <Form.Item label="Number of bags">
-                    <InputNumber />
+                    <InputNumber className="form__item" />
                 </Form.Item>
 
-                <Form.Item label="DatePicker">
-                    <DatePicker />
+                <Form.Item label="Date Picker">
+                    <DatePicker className="form__item"/>
                 </Form.Item>
 
                 <Form.Item
@@ -118,7 +133,7 @@ const DonateForm = () => {
                         },
                     ]}
                 >
-                    <Input.TextArea placeholder="Message ..." autoSize={{ minRows: 2, maxRows: 6 }}/>
+                    <Input.TextArea className="form__item" autoSize={{ minRows: 2, maxRows: 6 }}/>
                 </Form.Item>
 
 
