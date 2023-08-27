@@ -1,34 +1,40 @@
 import React from "react";
-import { Col, Row } from "antd";
-
-// const data = [
-// 	"Racing car sprays burning fuel into crowd.",
-// 	"Japanese princess to wed commoner.",
-// 	"Australian walks 100km after outback crash.",
-// 	"Man charged over missing wedding girl.",
-// ];
+import { Carousel } from "antd";
+import { steps } from "../config/stepCategories.js";
 
 const Category = () => {
 	return (
-		<div className='holder'>
-			<h2 className='holder__title'>
-				Category of <span className='holder__title--highlight'>toys</span>
-			</h2>
-			<div className='categories'>
-				<div>
-					<h1 className='categories__title'>Wooden toys</h1>
+		<>
+			<div className='holder'>
+				<h2 className='holder__title'>
+					Category of <span className='holder__title--highlight'>toys</span>
+				</h2>
+				<div className='categories'>
+					<Carousel autoplay>
+						{steps.map((step) => (
+							<>
+								<div
+									className='categories categories__carousel'
+									key={step.id}
+									style={{
+										backgroundImage: `url(${step.image})`,
+									}}>
+									<div className='categories__holder'>
+										<div>
+											<h1 className='categories__title'>{step.name}</h1>
 
-					<a href='#' className='categories__link'>
-						Show offer
-					</a>
-				</div>
-				<div className='categories__link_next'>
-					<a href='#' className='categories__link__next'>
-						&gt;
-					</a>
+											<a href={step.link} className='categories__link'>
+												Show offer
+											</a>
+										</div>
+									</div>
+								</div>
+							</>
+						))}
+					</Carousel>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
