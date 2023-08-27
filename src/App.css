@@ -248,8 +248,9 @@
 .aboutusblock .ant-col:nth-last-of-type(1) {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding: 35px 50px;
+	height: 400px;
 }
 
 /*  ----------------------------
@@ -410,14 +411,119 @@
 
 /*  ----------------------------
 
-    CATEGORY
+	CATEGORY OF TOYS
 
 ----------------------------  */
 
-.category {
+.categories {
+	background-color: var(--third-bg-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--border-shadow);
+}
+
+.categories .categories__holder {
+	margin-left: 570px;
+	width: 570px;
+	padding: 100px 0px;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
+	align-items: center;
+}
+
+.categories .ant-carousel .categories__carousel {
+	height: 400px;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+}
+
+.ant-carousel .slick-dots li.slick-active {
+	width: 16px;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+	padding: 15px;
+	font-family: var(--font-family-main);
+	color: var(--main-color);
+	background-color: var(--second-color);
+	border-radius: 30px;
+	box-shadow: var(--border-shadow);
+}
+
+.ant-carousel .slick-dots {
+	justify-content: flex-end;
+	margin-right: 210px;
+}
+
+.ant-carousel .slick-dots li {
+	margin-right: 15px;
+}
+
+.slick-dots ul.slick-dots-bottom {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	margin-right: 70px;
+	box-shadow: var(--border-shadow);
+}
+
+.ant-carousel .slick-dots li button {
+	height: 10px;
+	width: 10px;
+	bottom: 70px;
+	padding: 15px;
+	font-family: var(--font-family-main);
+	color: var(--main-color);
+	background-color: var(--third-bg-color);
+	border-radius: 30px;
+	box-shadow: var(--border-shadow);
+	opacity: 1;
+}
+
+.ant-carousel .slick-dots li button:hover {
+	background-color: var(--second-color);
+}
+
+div.slick-slide:not(.slick-active),
+div.slick-c:not(.slick-current) {
+	opacity: 0;
+}
+
+/* !!! TO CHANGE !!! */
+
+/* .ant-carousel .slick-slide {
+	float: none;
+} */
+
+.categories .categories__title {
+	font-size: var(--font-size--title);
+	font-weight: var(--font-weight--hero);
+	color: var(--primary-color);
+	display: flex;
+	justify-content: center;
+}
+
+.categories .categories__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--second-color);
+	width: 250px;
+	height: 40px;
+	font-family: var(--font-family-main);
+	color: var(--second-color);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--hero);
+	line-height: var(--font-line-height);
+	transition: 0.6s;
+}
+
+.categories .categories__link:hover {
+	background-color: var(--second-color);
+	color: var(--third-color);
+	border: 1px solid white;
 }
 
 /*  ----------------------------
