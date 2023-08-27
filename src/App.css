@@ -57,6 +57,12 @@
 	justify-content: space-between;
 }
 
+.user-panel__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .user-panel .user-panel__logo-img {
 	width: 40px;
 }
@@ -153,6 +159,41 @@
 
 .holder .holder__title .holder__title--highlight {
 	color: var(--second-color);
+}
+
+.ant-btn-default {
+	background-color: #ffffff;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--second-color);
+	width: 150px;
+	height: 40px;
+	margin-left: 70px;
+	font-family: var(--font-family-main);
+	color: var(--second-color);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--hero);
+	line-height: var(--font-line-height);
+}
+
+.ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+	border-radius: var(--border-radius);
+	border: 1px solid var(--second-color);
+	color: white;
+	background-color: var(--second-color);
+
+
+}
+.ant-modal .ant-modal-footer .ant-btn+.ant-btn:not(.ant-dropdown-trigger) {
+	display: none;
+}
+
+.ant-result .ant-result-icon  {
+	display: none;
+}
+
+.ant-modal .ant-modal-content {
+	background-color: var(--main-bg-color);
+	border-radius: var(--border-radius);
 }
 
 .button {
@@ -407,6 +448,22 @@
 	position: sticky;
 	top: 0;
 	left: 30px;
+}
+
+.ant-picker:hover {
+	border-color: var(--main-color);
+}
+
+.ant-input-number:hover {
+	border-color: var(--main-color);
+}
+
+.ant-picker-dropdown .ant-picker-today-btn {
+	color: var(--second-color);
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+	border: 1px solid var(--second-color);
 }
 
 /*  ----------------------------

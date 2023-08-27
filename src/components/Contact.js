@@ -126,7 +126,7 @@ const Contact = () => {
 								</Form.Item>
 							</Form>
 							<Modal open={isNoteOpen} onCancel={handleCancel} onOk={handleOk}>
-								<Result status='success' title='Successfully Purchased Message!' />
+								<Result status='success' title='Your message was sent!' className="modal__result" />
 							</Modal>
 
 						</div>
