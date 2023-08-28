@@ -563,6 +563,10 @@ div.slick-c:not(.slick-current) {
 	margin: 15px 0;
 }
 
+.faq__link, .faq__link:hover {
+	color: var(--second-color);
+	font-weight:  var(--font-weight--hero);
+}
 
 /*  ----------------------------
 
