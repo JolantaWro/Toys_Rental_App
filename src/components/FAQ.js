@@ -1,6 +1,6 @@
 import React from "react";
 import { Collapse } from "antd";
-import { fqaItems } from "../config/fqa-content.js"
+import { faqItems } from "../config/dataFaq.js"
 
 
 const Faq = () => {
@@ -16,7 +16,7 @@ const Faq = () => {
 						<Collapse
 							className='faq faq__collapse'
 							accordion
-							items={fqaItems}
+							items={faqItems}
 							bordered={false}
 						/>
 					</div>

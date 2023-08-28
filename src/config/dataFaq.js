@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const fqaItems = [
+export const faqItems = [
 	{
 		key: "1",
 		label: "Do I need an account to place an order",
@@ -11,7 +11,7 @@ export const fqaItems = [
 	{
 		key: "2",
 		label: "Can I change email address on my account",
-		children: <p>Sure! To do so, please contact our customer service: responsecenterservice@outlook.com or use <Link to='/#contact' className="faq__link">Contact</Link>.</p>,
+		children: <p>Sure! To do so, please contact our customer service: responsecenterservice@outlook.com or use <Link to='/contact' className="faq__link">Contact</Link>.</p>,
 	},
 	{
 		key: "3",
