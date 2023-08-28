@@ -1,14 +1,13 @@
 :root {
 	--main-bg-color: #f3f4f9;
-	/* --second-bg-color: rgb(90, 184, 98); */
 	--third-bg-color: #fff;
 	--main-color: #2b2b29;
 	--decor-color: rgba(148, 148, 148, 0.212);
 	--second-color: #ff5d00;
-	/* --second-color: #e65a0a; */
 	--third-color: #fff;
 	--font-family-main: "Poppins", sans-serif;
 	--font-size--main: 18px;
+	--font-size--second: 22px;
 	--font-size--decor: 10.5rem;
 	--font-size--hero: 2.5rem;
 	--font-size--hero2: 1.6rem;
@@ -87,12 +86,12 @@
 .topbar__link {
 	margin: 0 20px 0 0;
 	color: var(--main-color);
-	font-size: 22px;
+	font-size: var(--font-size--second);
 	font-weight: var(--font-weight--hero);
 }
 
 .topbar__link--small {
-	font-size: 18px;
+	font-size: var(--font-size--main);
 	font-weight: var(--font-weight--main);
 }
 
@@ -162,7 +161,7 @@
 }
 
 .ant-btn-default {
-	background-color: #ffffff;
+	background-color: var(--third-bg-color);
 	border-radius: var(--border-radius);
 	border: 1px solid var(--second-color);
 	width: 150px;
@@ -178,7 +177,7 @@
 .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
 	border-radius: var(--border-radius);
 	border: 1px solid var(--second-color);
-	color: white;
+	color: var(--third-color);
 	background-color: var(--second-color);
 
 
@@ -187,13 +186,27 @@
 	display: none;
 }
 
+.ant-picker-dropdown .ant-picker-today-btn:hover {
+	color: var(--second-color);
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+	background-color: var(--second-color);
+}
+
 .ant-result .ant-result-icon  {
 	display: none;
 }
 
 .ant-modal .ant-modal-content {
-	background-color: var(--main-bg-color);
+	background-color: var(--third-bg-color);
 	border-radius: var(--border-radius);
+}
+
+.anticon svg {
+	margin-right: 50px;
+	color: var(--main-color);
+	font-weight: var(--font-weight--hero);
 }
 
 .button {
@@ -367,7 +380,7 @@
 
 
 .ant-form button {
-	background-color: #ffffff;
+	background-color: var(--third-bg-color);
 	border-radius: var(--border-radius);
 	border: 1px solid var(--second-color);
 	width: 150px;
