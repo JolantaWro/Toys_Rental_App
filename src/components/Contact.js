@@ -1,8 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Col, Row } from "antd";
-import contact from "../assets/img/contact.png";
 import { Button, Form, Input, Modal, Result } from "antd";
-import { useNavigate } from "react-router-dom";
 import EmailService from "../services/email-service";
 
 const Contact = () => {
@@ -15,22 +13,16 @@ const Contact = () => {
 		setIsNoteOpen(false);
 	};
 
-	const showNote = () => {
-		setIsNoteOpen(true);
-	};
 	const handleCancel = () => {
 		setIsNoteOpen(false);
 	};
 
 	const onFinish = (values) => {
-		console.log("Success:", values);
 		EmailService.sendEmail(values);
 		setIsNoteOpen(true);
 		setNameUser("");
 		setMailUser("");
 		setMessageUser("");
-		// setIsModalOpen(true)
-		// navigate('/sendForm');
 	};
 	const onFinishFailed = (errorInfo) => {
 		console.log("Failed:", errorInfo);
@@ -126,17 +118,12 @@ const Contact = () => {
 								</Form.Item>
 							</Form>
 							<Modal open={isNoteOpen} onCancel={handleCancel} onOk={handleOk}>
-								<Result status='success' title='Successfully Purchased Message!' />
+								<Result status='success' title='Your message was sent!' className="modal__result" />
 							</Modal>
-
 						</div>
-						
 					</Col>
 				</Row>
-
-				
 			</div>
-
 		</div>
 	);
 };

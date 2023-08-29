@@ -42,7 +42,7 @@ const DonateForm = () => {
 
     return (
         <>
-            <Form className="donateForm"
+            <Form
                   name="basic"
                   labelCol={{
                       span: 8,
@@ -97,9 +97,7 @@ const DonateForm = () => {
                     },
                     ]}
                 >
-                    <Input 
-                    className="form__item"
-                    />
+                    <Input className="form__item" />
                 </Form.Item>
 
                 <Form.Item

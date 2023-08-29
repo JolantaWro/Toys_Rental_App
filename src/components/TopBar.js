@@ -8,7 +8,7 @@ const TopBar = () => {
 		<>
 			<div className='container'>
 				<div className='user-panel'>
-					<div>
+					<div className="user-panel__container">
 						<img src={logo} className='user-panel__logo-img'></img>
 						<span className='user-panel__logo-name'>TOYS RENTAL</span>
 					</div>
