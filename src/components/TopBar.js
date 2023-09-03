@@ -13,8 +13,8 @@ const TopBar = () => {
 						<span className='user-panel__logo-name'>TOYS RENTAL</span>
 					</div>
 					<div>
-						<a className="topbar__link topbar__link--small">Logowanie</a>
-						<a className="topbar__link topbar__link--small">Rejestracja</a>
+						<Link to="/login" className="topbar__link topbar__link--small">Login</Link>
+						<Link to="/register" className="topbar__link topbar__link--small">Register</Link>
 					</div>
 				</div>
 				<div className='topbar'>
