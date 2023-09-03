@@ -16,7 +16,7 @@ const Landing = () => {
             <Link to="/login" >Login</Link><br>
             </br>
             <Link to="/register" >Register</Link>
-            <p >or view SITE</p>
+            <p >or view SITE if you have time</p>
             {/* <Link to="/check" >SITE</Link> */}
         </div>
     </>
