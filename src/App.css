@@ -179,10 +179,8 @@
 	border: 1px solid var(--second-color);
 	color: var(--third-color);
 	background-color: var(--second-color);
-
-
 }
-.ant-modal .ant-modal-footer .ant-btn+.ant-btn:not(.ant-dropdown-trigger) {
+.ant-modal .ant-modal-footer .ant-btn + .ant-btn:not(.ant-dropdown-trigger) {
 	display: none;
 }
 
@@ -190,11 +188,13 @@
 	color: var(--second-color);
 }
 
-.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+.ant-picker-dropdown
+	.ant-picker-cell-in-view.ant-picker-cell-selected
+	.ant-picker-cell-inner {
 	background-color: var(--second-color);
 }
 
-.ant-result .ant-result-icon  {
+.ant-result .ant-result-icon {
 	display: none;
 }
 
@@ -362,22 +362,20 @@
 	color: var(--main-color);
 }
 
-
-.ant-form-item .ant-form-item-label >label {
+.ant-form-item .ant-form-item-label > label {
 	font-size: var(--font-size--main);
 }
-
 
 .form__item {
 	border-radius: var(--border-radius);
 	border: 1px solid var(--main-color);
 }
 
-.ant-input:focus, .ant-input:hover {
+.ant-input:focus,
+.ant-input:hover {
 	border-radius: var(--border-radius);
 	border: 1px solid var(--main-color);
 }
-
 
 .ant-form button {
 	background-color: var(--third-bg-color);
@@ -394,9 +392,8 @@
 }
 
 .ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
-	background-color:var(--second-color)
+	background-color: var(--second-color);
 }
-
 
 /*  ----------------------------
 
@@ -475,7 +472,9 @@
 	color: var(--second-color);
 }
 
-.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+.ant-picker-dropdown
+	.ant-picker-cell-in-view.ant-picker-cell-today
+	.ant-picker-cell-inner::before {
 	border: 1px solid var(--second-color);
 }
 
@@ -633,9 +632,10 @@ div.slick-c:not(.slick-current) {
 	margin: 15px 0;
 }
 
-.faq__link, .faq__link:hover {
+.faq__link,
+.faq__link:hover {
 	color: var(--second-color);
-	font-weight:  var(--font-weight--hero);
+	font-weight: var(--font-weight--hero);
 }
 
 /*  ----------------------------
@@ -644,7 +644,6 @@ div.slick-c:not(.slick-current) {
 
 ----------------------------  */
 
-
 .footer {
 	background: var(--main-bg-color);
 	margin: 30px 0;
@@ -652,4 +651,62 @@ div.slick-c:not(.slick-current) {
 }
 .copyright {
 	font-size: var(--font-size--main);
+}
+
+/*  ----------------------------
+
+    RENTAL TOYS
+
+----------------------------  */
+
+.rentaltoys {
+	/* margin-bottom: 200px; */
+}
+
+.rentaltoys .ant-col {
+	/* background-color: green; */
+	margin-bottom: 50px;
+}
+
+.rentaltoys .rentaltoys__content {
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	overflow: hidden;
+	box-shadow: var(--border-shadow);
+}
+
+.rentaltoys .rentaltoys__title {
+	/* background-color: var(--third-bg-color);
+	font-family: var(--font-family-main);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--hero);
+	color: var(--main-color);
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0 0 var(--border-radius) var(--border-radius); */
+}
+
+.rentaltoys .rentaltoys__content .rentaltoys__img {
+	height: 300px;
+	background-repeat: no-repeat;
+	width: 285px;
+}
+
+.rentaltoys .rentaltoys__content .rentaltoys__title {
+	background-color: var(--third-bg-color);
+	font-family: var(--font-family-main);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--hero);
+	color: var(--main-color);
+	height: 120px;
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.rentaltoys .rentaltoys__content .rentaltoys__btn {
+	margin: 10px 0;
 }
