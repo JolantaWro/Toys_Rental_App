@@ -14,7 +14,7 @@ const Category = () => {
 						{steps.map((step) => (
 							<>
 								<div
-									className='categories categories__carousel'
+									className='categories__carousel'
 									key={step.id}
 									style={{
 										backgroundImage: `url(${step.image})`,

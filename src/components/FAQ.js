@@ -1,7 +1,6 @@
 import React from "react";
 import { Collapse } from "antd";
-import { faqItems } from "../config/dataFaq.js"
-
+import { faqItems } from "../config/dataFaq.js";
 
 const Faq = () => {
 	return (
@@ -14,7 +13,7 @@ const Faq = () => {
 					</h2>
 					<div className='faq'>
 						<Collapse
-							className='faq faq__collapse'
+							className='faq__collapse'
 							accordion
 							items={faqItems}
 							bordered={false}

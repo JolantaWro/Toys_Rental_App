@@ -14,12 +14,12 @@ const HowItWorks = () => {
 						<Col span={6} className='howitworks__item' key={step.id}>
 							<div className='howitworks__item'>
 								<div
-									className='howitworks__item howitworks__img'
+									className='howitworks__img'
 									style={{
 										backgroundImage: `url(${step.image})`,
 									}}></div>
 							</div>
-							<div className='howitworks__item howitworks__description'>
+							<div className='howitworks__description'>
 								<span>{step.description}</span>
 							</div>
 						</Col>

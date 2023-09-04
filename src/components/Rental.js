@@ -25,43 +25,20 @@ const Rental = () => {
 									span: 5,
 									// offset: 2,
 								}}>
-								<div className='rentaltoys rentaltoys__content'>
+								<div className=''>
 									<div
-										className='rentaltoys  rentaltoys__img'
+										className='rentaltoys__img'
 										style={{
 											backgroundImage: `url(${product.image})`,
 										}}></div>
 								</div>
-								<div className='rentaltoys rentaltoys__content rentaltoys__title'>
+								<div className='rentaltoys__content rentaltoys__title'>
 									<span>{product.title}</span>
 									<Space wrap>
-										<Button className='rentaltoys__btn'>Order</Button>
+										<Button className='rentaltoys__btn'>Show details</Button>
 									</Space>
 								</div>
 							</Col>
-							// <Col
-							// 	key={product.id}
-							// 	xs={{
-							// 		span: 5,
-							// 		offset: 1,
-							// 	}}
-							// 	lg={{
-							// 		span: 6,
-							// 		offset: 2,
-							// 	}}>
-							// 	<div className=' rentaltoys rentaltoys__content'>
-							// 		<div className='rentaltoys  rentaltoys__image'></div>
-							// 		<h3 className='rentaltoys  rentaltoys__title'>
-							// 			{product.title}
-							// 		</h3>
-							// 		<div className='rentaltoys  rentaltoys__status'>
-							// 			{product.status}
-							// 		</div>
-							// 		<Space wrap>
-							// 			<Button>Order</Button>
-							// 		</Space>
-							// 	</div>
-							// </Col>
 						))}
 					</Row>
 				</div>
