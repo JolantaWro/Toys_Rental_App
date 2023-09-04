@@ -12,24 +12,22 @@ const Category = () => {
 				<div className='categories'>
 					<Carousel autoplay>
 						{steps.map((step) => (
-							<>
-								<div
-									className='categories__carousel'
-									key={step.id}
-									style={{
-										backgroundImage: `url(${step.image})`,
-									}}>
-									<div className='categories__holder'>
-										<div>
-											<h1 className='categories__title'>{step.name}</h1>
+							<div
+								className='categories__carousel'
+								key={step.id}
+								style={{
+									backgroundImage: `url(${step.image})`,
+								}}>
+								<div className='categories__holder'>
+									<div>
+										<h1 className='categories__title'>{step.name}</h1>
 
-											<a href={step.link} className='categories__link'>
-												Show offer
-											</a>
-										</div>
+										<a href={step.link} className='categories__link'>
+											Show offer
+										</a>
 									</div>
 								</div>
-							</>
+							</div>
 						))}
 					</Carousel>
 				</div>
