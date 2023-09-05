@@ -451,7 +451,7 @@
 }
 
 .donatetoys__block .ant-col:nth-last-of-type(1) .donatetoys__decor {
-	color: red;
+	/* color: red; */
 	background-color: #2f2f2f;
 	flex: none;
 	position: -webkit-sticky;
@@ -476,6 +476,17 @@
 	.ant-picker-cell-in-view.ant-picker-cell-today
 	.ant-picker-cell-inner::before {
 	border: 1px solid var(--second-color);
+}
+
+.donatetoys__form {
+	padding: 35px 50px;
+	font-family: var(--font-family-main);
+	color: var(--main-color);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--main);
+	background-color: var(--third-bg-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--border-shadow);
 }
 
 /*  ----------------------------
@@ -505,6 +516,7 @@
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
+	border-radius: var(--border-radius);
 }
 
 .ant-carousel .slick-dots li.slick-active {
@@ -592,7 +604,7 @@ div.slick-c:not(.slick-current) {
 .categories .categories__link:hover {
 	background-color: var(--second-color);
 	color: var(--third-color);
-	border: 1px solid white;
+	border: 1px solid var(--second-color);
 }
 
 /*  ----------------------------
@@ -620,7 +632,7 @@ div.slick-c:not(.slick-current) {
 	font-weight: var(--font-weight--hero);
 }
 
-.faq .faq__collapse .ant-collapse-expand-icon {
+.faq .faq__collapse .ant-collapse-expand-icon svg {
 	color: var(--second-color);
 }
 
@@ -659,12 +671,7 @@ div.slick-c:not(.slick-current) {
 
 ----------------------------  */
 
-.rentaltoys {
-	/* margin-bottom: 200px; */
-}
-
 .rentaltoys .ant-col {
-	/* background-color: green; */
 	margin-bottom: 50px;
 }
 
@@ -672,19 +679,6 @@ div.slick-c:not(.slick-current) {
 	border-radius: var(--border-radius) var(--border-radius) 0 0;
 	overflow: hidden;
 	box-shadow: var(--border-shadow);
-}
-
-.rentaltoys .rentaltoys__title {
-	/* background-color: var(--third-bg-color);
-	font-family: var(--font-family-main);
-	font-size: var(--font-size--main);
-	font-weight: var(--font-weight--hero);
-	color: var(--main-color);
-	height: 70px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 0 0 var(--border-radius) var(--border-radius); */
 }
 
 .rentaltoys .rentaltoys__content .rentaltoys__img {

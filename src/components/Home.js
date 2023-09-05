@@ -3,11 +3,8 @@ import Start from "./Start";
 import HowItWorks from "./HowItWorks";
 import AboutAs from "./AboutAs";
 import Category from "./Category";
-import DonateToys from "./DonateToys";
-import Rental from "./Rental";
 import Contact from "./Contact";
 import OurOffer from "./OurOffer";
-import FAQ from "./FAQ";
 
 const Home = () => {
 	return (

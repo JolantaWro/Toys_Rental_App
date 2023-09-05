@@ -71,7 +71,7 @@ const DonateToys = () => {
 						Ready to donate your toys?{" "}
 						<span className='holder__title--highlight'>Let's start!</span>
 					</h2>
-					<div id='donate-form' className='donatetoys'>
+					<div id='donate-form' className='donatetoys__form'>
 						<DonateForm />
 					</div>
 				</div>
