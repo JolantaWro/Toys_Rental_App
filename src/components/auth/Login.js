@@ -100,7 +100,7 @@ const Login = ({ setAuth }) => {
 							<button className='form_btn--active'>Login</button>
 						</form>
 						<div className='addition_container'>
-							<p className='decor--border'>or</p>
+							<p className='decor--border'></p>
 							<Link className='form_btn--inactive' to='/register'>
 								Register
 							</Link>
