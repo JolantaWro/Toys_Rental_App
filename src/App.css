@@ -710,7 +710,7 @@ div.slick-c:not(.slick-current) {
 
 /*  ----------------------------
 
-    LOGIN FORM
+    LOGIN & REGISTER FORM
 
 ----------------------------  */
 
@@ -736,13 +736,14 @@ div.slick-c:not(.slick-current) {
 	border: 0px solid var(--main-color);
 	height: 32px;
 	padding: 20px;
+	margin-bottom: 20px;
 }
 
 .login_container .login_form .form_btn--active {
 	border-radius: var(--border-radius);
 	border: 1px solid var(--second-color);
 	width: 150px;
-	height: 40px;
+	min-height: 40px;
 	font-family: var(--font-family-main);
 	font-size: var(--font-size--main);
 	font-weight: var(--font-weight--hero);

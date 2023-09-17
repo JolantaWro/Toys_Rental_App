@@ -41,37 +41,6 @@ const Login = ({ setAuth }) => {
 	};
 
 	return (
-		// <>
-		//   <div>
-		//       <div>
-		//           <p >Login</p>
-		//           <form  onSubmit={onSubmitForm}>
-		//             <input
-		//               type="text"
-		//               placeholder="Email"
-		//               name="email"
-		//               value={email}
-		//               onChange={e => onChange(e)}
-
-		//             />
-		//             <input
-		//               type="password"
-		//               placeholder="Password"
-		//               name="password"
-		//               value={password}
-		//               onChange={e => onChange(e)}
-
-		//             />
-		//             <button >Login</button>
-		//           </form>
-		//           <p >or</p>
-		//           <Link to="/register" > Register</Link>
-		//       </div>
-
-		//   </div>
-
-		// </>
-
 		<>
 			<div className='container'>
 				<div className='holder'>
