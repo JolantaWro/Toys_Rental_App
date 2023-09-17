@@ -3,7 +3,6 @@
 	--third-bg-color: #fff;
 	--main-color: #2b2b29;
 	--decor-color: rgba(148, 148, 148, 0.412);
-	/* --decor-color: rgba(148, 148, 148, 0.212); */
 	--second-color: #ff5d00;
 	--third-color: #fff;
 	--font-family-main: "Poppins", sans-serif;
@@ -94,6 +93,12 @@
 .topbar__link--small {
 	font-size: var(--font-size--main);
 	font-weight: var(--font-weight--main);
+}
+
+.topbar__link--decor::after {
+	color: var(--decor-color);
+	content: "\007C";
+	margin-left: 20px;
 }
 
 .topbar__link:hover {
