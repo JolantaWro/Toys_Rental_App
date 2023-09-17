@@ -2,7 +2,7 @@
 	--main-bg-color: #f3f4f9;
 	--third-bg-color: #fff;
 	--main-color: #2b2b29;
-	--decor-color: rgba(148, 148, 148, 0.212);
+	--decor-color: rgba(148, 148, 148, 0.412);
 	--second-color: #ff5d00;
 	--third-color: #fff;
 	--font-family-main: "Poppins", sans-serif;
@@ -93,6 +93,12 @@
 .topbar__link--small {
 	font-size: var(--font-size--main);
 	font-weight: var(--font-weight--main);
+}
+
+.topbar__link--decor::after {
+	color: var(--decor-color);
+	content: "\007C";
+	margin-left: 20px;
 }
 
 .topbar__link:hover {
@@ -511,7 +517,9 @@
 	align-items: center;
 }
 
-.categories .ant-carousel .categories__carousel {
+.categories .categories__carousel {
+	/* background-image: url("../src/assets/img/cat-lego.png"); */
+	/* background-color: lightblue; */
 	height: 400px;
 	background-repeat: no-repeat;
 	display: flex;
@@ -703,4 +711,96 @@ div.slick-c:not(.slick-current) {
 
 .rentaltoys .rentaltoys__content .rentaltoys__btn {
 	margin: 10px 0;
+}
+
+/*  ----------------------------
+
+    LOGIN & REGISTER FORM
+
+----------------------------  */
+
+.login_container {
+	min-height: 540px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.login_container .login_form {
+	max-width: 270px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.login_container .login_form .form__item {
+	border-radius: var(--border-radius);
+	border: 0px solid var(--main-color);
+	height: 32px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.login_container .login_form .form_btn--active {
+	border-radius: var(--border-radius);
+	border: 1px solid var(--second-color);
+	width: 150px;
+	min-height: 40px;
+	font-family: var(--font-family-main);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--hero);
+	line-height: var(--font-line-height);
+	background-color: var(--second-color);
+	color: var(--third-color);
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.login_container .form_btn--inactive {
+	background-color: var(--third-bg-color);
+	border-radius: var(--border-radius);
+	border: 1px solid var(--second-color);
+	width: 150px;
+	height: 40px;
+	font-family: var(--font-family-main);
+	color: var(--second-color);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--hero);
+	line-height: var(--font-line-height);
+}
+
+.login_container .addition_container {
+	max-width: 300px;
+	margin-bottom: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.login_container .addition_container > * {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.login_container .addition_container .decor--border {
+	font-family: var(--font-family-main);
+	color: var(--decor-color);
+	font-size: var(--font-size--main);
+	font-weight: var(--font-weight--main);
+	margin-top: 30px;
+}
+
+.login_container .addition_container .decor--border::after {
+	content: "";
+	width: 300px;
+	border-bottom: 1px solid var(--decor-color);
+	position: relative;
+	bottom: 40px;
+	z-index: 10;
 }
