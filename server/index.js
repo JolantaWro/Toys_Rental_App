@@ -12,6 +12,7 @@ app.use(express.json()); //req.bodygit
 //routes
 app.use("/auth", require("./routes/auth"));
 app.use("/dashboard", require("./routes/dashboard"));
+app.use("/rental", require("./routes/rental"));
 
 
 app.listen(5000, () => {
