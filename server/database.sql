@@ -40,3 +40,7 @@ INSERT INTO products (product_name, product_producer, product_description, user_
 
 --insert fake users
 insert into users (user_name, user_email, user_password) values ('jolanta', 'jolanta@gmail.com', 'jolanta');
+
+puzzle_1.png
+UPDATE products SET product_photo = 'LEGOFriends.jpg'WHERE product_id = 1;
+UPDATE products SET product_photo = 'puzzle_1.png' WHERE product_id = 4;

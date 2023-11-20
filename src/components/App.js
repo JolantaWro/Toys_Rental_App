@@ -66,6 +66,7 @@ function App() {
 							<Route path='/rental' element={<Rental />} />
 							<Route path='/contact' element={<Contact />} />
 							<Route path='/faq' element={<FAQ />} />
+							<Route path='/product' element={<DetailsProducts />} />
 							<Route
 								exact
 								path='/login'
@@ -99,7 +100,7 @@ function App() {
 									)
 								}
 							/>
-							<Route path='/product' element={<DetailsProducts />} />
+							
 						</Routes>
 					</Content>
 				</Router>

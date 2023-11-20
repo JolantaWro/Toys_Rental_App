@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "antd";
 import { Button, Space } from "antd";
+import { Link } from "react-router-dom";
+import DetailsProducts from "./DetailsProduct";
 
 const Rental = () => {
 	const [toysProduct, setToysProduct] = useState([]);
@@ -27,6 +29,7 @@ const Rental = () => {
 	return (
 		<>
 			<div className='container'>
+
 				<div className='holder'>
 					<h2 className='holder__title'>
 						Rent <span className='holder__title--highlight'>Toys</span>
@@ -45,23 +48,23 @@ const Rental = () => {
 									// offset: 2,
 								}}>
 								<div className=''>
-									<div
-										className='rentaltoys__img'
-										style={{
-											backgroundColor: 'pink',
-											// backgroundImage: `url(${product.image})`,
-										}}></div>
+									{product.product_photo === null ? 
+									<div className='rentaltoys__img' style={{backgroundColor: 'pink'}}></div> : 
+									
+									<div className='rentaltoys__img' style={{backgroundImage: `url(./assets/img/${product.product_photo})`}}></div>}
+
 								</div>
 								<div className='rentaltoys__content rentaltoys__title'>
 									<span>{product.product_name}</span>
-									<Space wrap>
-										<Button className='rentaltoys__btn'>Show details</Button>
+									<Space wrap> 
+										<Link to='/product' state={{ product_id: product.product_id }}><Button className='rentaltoys__btn'>Show details</Button></Link>
 									</Space>
 								</div>
 							</Col>
 						))}
 					</Row>
 				</div>
+
 			</div>
 		</>
 	);
