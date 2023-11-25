@@ -29,7 +29,6 @@ function App() {
 
 	const checkAuthenticated = async () => {
 		try {
-			// const res = await fetch(process.env.POSTGRES_URL + "/auth/is-verify", {
 			const res = await fetch("http://localhost:5000/auth/is-verify", {
 				method: "GET",
 				headers: { token: localStorage.token },

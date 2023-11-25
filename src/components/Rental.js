@@ -10,8 +10,7 @@ const Rental = () => {
 
 	const getProduct = async () => {
 		try {
-			const res = await fetch("https://toys-rental-app.vercel.app/rental/");
-			// const res = await fetch("http://localhost:5000/rental/");
+			const res = await fetch("http://localhost:5000/rental/");
 
 			const parseData = await res.json();
 			setToysProduct(parseData)
