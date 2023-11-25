@@ -10,7 +10,13 @@ const Rental = () => {
 
 	const getProduct = async () => {
 		try {
-			const res = await fetch(`/rental`);
+			const apiUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_API_URL : 'http://localhost:5000';
+			const res = await fetch(`${apiUrl}/rental/`);
+
+			// const res = await fetch("http://localhost:5000/rental/");
+
+
+			// const res = await fetch(`${process.env.REACT_APP_API_URL}/rental`);
 
 			console.log(res)
 
