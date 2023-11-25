@@ -10,13 +10,13 @@ const Rental = () => {
 
 	const getProduct = async () => {
 		try {
-			const res = await fetch("http://localhost:5000/rental/");
+			const res = await fetch(`${process.env.REACT_APP_API_URL}/rental/`);
 
 			const parseData = await res.json();
 			setToysProduct(parseData)
 		
 		} catch (err) {
-			console.error(err.message);
+			console.error("Rental", err.message);
 		}
 	};
 
