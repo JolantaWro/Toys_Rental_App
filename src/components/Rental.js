@@ -10,7 +10,7 @@ const Rental = () => {
 
 	const getProduct = async () => {
 		try {
-			const res = await fetch(`/rental/`);
+			const res = await fetch(`/rental`);
 
 			console.log(res)
 
