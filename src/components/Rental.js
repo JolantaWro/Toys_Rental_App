@@ -16,7 +16,7 @@ const Rental = () => {
 			setToysProduct(parseData)
 		
 		} catch (err) {
-			console.error(err.message);
+			console.error("Rental", err.message);
 		}
 	};
 
