@@ -10,7 +10,18 @@ const Rental = () => {
 
 	const getProduct = async () => {
 		try {
-			const res = await fetch(`${process.env.REACT_APP_API_URL}/rental/`);
+			console.log(JSON.stringify(process.env))
+			const apiUrl = process.env.NODE_ENV === 'production' ? "https://toys-rental-app.vercel.app" : 'http://localhost:5000/rental/';
+			const res = await fetch(`${apiUrl}/rental/`);
+			// const res = await fetch(`${apiUrl}`);
+
+
+			// const res = await fetch("http://localhost:5000/rental/");
+
+
+			// const res = await fetch(`${process.env.REACT_APP_API_URL}/rental`);
+
+			console.log(res)
 
 			const parseData = await res.json();
 			setToysProduct(parseData)
