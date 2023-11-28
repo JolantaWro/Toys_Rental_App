@@ -29,7 +29,8 @@ function App() {
 
 	const checkAuthenticated = async () => {
 		try {
-			const res = await fetch(`/auth/is-verify`, {
+			const apiUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_VERCEL_URL : 'http://localhost:5000';
+			const res = await fetch(`${apiUrl}/auth/is-verify`, {
 				method: "GET",
 				headers: { token: localStorage.token },
 			});
