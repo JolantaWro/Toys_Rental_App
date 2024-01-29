@@ -4,13 +4,30 @@ import { HashLink as Link } from "react-router-hash-link";
 import { useLocation } from 'react-router-dom';
 import { category } from "../config/categoryProducts";
 
+import { Button, Form, Input, Modal, Result } from "antd";
+import EmailService from "../services/email-service";
+
 
 const DetailsProducts = () => {
+
+	const [isNoteOpen, setIsNoteOpen] = useState(false);
 
 	const location = useLocation();
 	const { product_id } = location.state
 
 	const [toysProduct, setToysProduct] = useState([]);
+
+	const handleOrder = () => {
+		setIsNoteOpen(true)
+	}
+
+	const handleOk = () => {
+		setIsNoteOpen(false);
+	};
+
+	const handleCancel = () => {
+		setIsNoteOpen(false);
+	};
 
 
 	const getProduct = async () => {
@@ -68,12 +85,13 @@ const DetailsProducts = () => {
 							<Col span={12}></Col>
 							<Col span={12}>
 								<p>{toysProduct.product_description}</p>
-								<Link to='#' className='button'>
-									Order
-								</Link>
+								<Button className='button' onClick={handleOrder}>Order</Button>
 							</Col>
 						</Row>
 					</div>
+					<Modal open={isNoteOpen} onCancel={handleCancel} onOk={handleOk}>
+						<Result status='success' title='Your message was sent!' className="modal__result" />
+					</Modal>
 				</div>
 			</div>
 		</>
