@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "antd";
-import { HashLink as Link } from "react-router-hash-link";
 import { useLocation } from 'react-router-dom';
 import { category } from "../config/categoryProducts";
 
-import { Button, Form, Input, Modal, Result } from "antd";
+import { Button, Modal, Result } from "antd";
 import EmailService from "../services/email-service";
 
 
@@ -19,14 +18,18 @@ const DetailsProducts = () => {
 
 	const handleOrder = () => {
 		setIsNoteOpen(true)
+		const value = {from_name: 'user', to_name: 'Rental Toys', message:`Order product id: ${product_id}`}
+		EmailService.sendEmail(value);
 	}
 
 	const handleOk = () => {
 		setIsNoteOpen(false);
+		window.location.href = "/rental";
 	};
 
 	const handleCancel = () => {
 		setIsNoteOpen(false);
+		window.location.href = "/rental";
 	};
 
 
@@ -90,7 +93,12 @@ const DetailsProducts = () => {
 						</Row>
 					</div>
 					<Modal open={isNoteOpen} onCancel={handleCancel} onOk={handleOk}>
-						<Result status='success' title='Your message was sent!' className="modal__result" />
+						<Result 
+							status='success' 
+							title='Thank you for placing your order!' 
+							subTitle='You will receive an email with confirmation and details of your order shortly.'
+							className="modal__result" 
+						/>
 					</Modal>
 				</div>
 			</div>
