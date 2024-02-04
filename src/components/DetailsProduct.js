@@ -1,16 +1,36 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "antd";
-import { HashLink as Link } from "react-router-hash-link";
 import { useLocation } from 'react-router-dom';
 import { category } from "../config/categoryProducts";
 
+import { Button, Modal, Result } from "antd";
+import EmailService from "../services/email-service";
+
 
 const DetailsProducts = () => {
+
+	const [isNoteOpen, setIsNoteOpen] = useState(false);
 
 	const location = useLocation();
 	const { product_id } = location.state
 
 	const [toysProduct, setToysProduct] = useState([]);
+
+	const handleOrder = () => {
+		setIsNoteOpen(true)
+		const value = {from_name: 'user', to_name: 'Rental Toys', message:`Order product id: ${product_id}`}
+		EmailService.sendEmail(value);
+	}
+
+	const handleOk = () => {
+		setIsNoteOpen(false);
+		window.location.href = "/rental";
+	};
+
+	const handleCancel = () => {
+		setIsNoteOpen(false);
+		window.location.href = "/rental";
+	};
 
 
 	const getProduct = async () => {
@@ -68,12 +88,18 @@ const DetailsProducts = () => {
 							<Col span={12}></Col>
 							<Col span={12}>
 								<p>{toysProduct.product_description}</p>
-								<Link to='#' className='button'>
-									Order
-								</Link>
+								<Button className='button' onClick={handleOrder}>Order</Button>
 							</Col>
 						</Row>
 					</div>
+					<Modal open={isNoteOpen} onCancel={handleCancel} onOk={handleOk}>
+						<Result 
+							status='success' 
+							title='Thank you for placing your order!' 
+							subTitle='You will receive an email with confirmation and details of your order shortly.'
+							className="modal__result" 
+						/>
+					</Modal>
 				</div>
 			</div>
 		</>
