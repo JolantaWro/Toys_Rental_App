@@ -30,7 +30,7 @@ const Contact = () => {
 
 	return (
 		<div className='holder'>
-			<h2 className='holder__title'>
+			<h2 className='holder__title' >
 				Contact <span className='holder__title--highlight'>Us</span>
 			</h2>
 
