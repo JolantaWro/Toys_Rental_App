@@ -57,6 +57,8 @@ const DetailsProducts = () => {
 
 
 	const foundCategory = category.find(category => category.id === toysProduct.category_id);
+	const photoBackground = "./assets/img/about-us.png"
+	console.log(toysProduct)
 
 
 	return (
@@ -85,7 +87,9 @@ const DetailsProducts = () => {
 					</div>
 					<div className='detailsproduct'>
 						<Row>
-							<Col span={12}></Col>
+							<Col span={12}>
+								<img src={`/assets/img/${toysProduct.product_photo}`} alt="Product"  />	
+							</Col>
 							<Col span={12}>
 								<p>{toysProduct.product_description}</p>
 								<Button className='button' onClick={handleOrder}>Order</Button>
