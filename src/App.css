@@ -517,14 +517,11 @@
 	align-items: center;
 }
 
-.categories .categories__carousel {
-	/* background-image: url("../src/assets/img/cat-lego.png"); */
-	/* background-color: lightblue; */
+.categories .ant-carousel .categories__carousel {
 	height: 400px;
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
-	border-radius: var(--border-radius);
 }
 
 .ant-carousel .slick-dots li.slick-active {
@@ -579,12 +576,6 @@ div.slick-c:not(.slick-current) {
 	opacity: 0;
 }
 
-/* !!! TO CHANGE !!! */
-
-/* .ant-carousel .slick-slide {
-	float: none;
-} */
-
 .categories .categories__title {
 	font-size: var(--font-size--title);
 	font-weight: var(--font-weight--hero);
@@ -612,7 +603,7 @@ div.slick-c:not(.slick-current) {
 .categories .categories__link:hover {
 	background-color: var(--second-color);
 	color: var(--third-color);
-	border: 1px solid var(--second-color);
+	border: 1px solid white;
 }
 
 /*  ----------------------------
