@@ -12,13 +12,13 @@ const DetailsProducts = () => {
 	const [isNoteOpen, setIsNoteOpen] = useState(false);
 
 	const location = useLocation();
-	const { product_id } = location.state
+	const { id } = location.state
 
 	const [toysProduct, setToysProduct] = useState([]);
 
 	const handleOrder = () => {
 		setIsNoteOpen(true)
-		const value = {from_name: 'user', to_name: 'Rental Toys', message:`Order product id: ${product_id}`}
+		const value = {from_name: 'user', to_name: 'Rental Toys', message:`Order product id: ${id}`}
 		EmailService.sendEmail(value);
 	}
 
@@ -35,15 +35,15 @@ const DetailsProducts = () => {
 
 	const getProduct = async () => {
 		try {
-			const res = await fetch("http://localhost:5000/rental/");
+			const res = await fetch("https://api-nu-green.vercel.app/products");
 
 			const parseData = await res.json();
-			const foundProduct = parseData.find(product => product.product_id === product_id);
+			const foundProduct = parseData.find(product => product.id === id);
 
 			if (foundProduct) {
 				setToysProduct(foundProduct);
 			} else {
-				console.error(`Product with id ${product_id} not found.`);
+				console.error(`Product with id ${id} not found.`);
 			}
 		
 		} catch (err) {
@@ -53,10 +53,10 @@ const DetailsProducts = () => {
 
 	useEffect(() => {
 		getProduct();
-	  }, [product_id]);
+	  }, [id]);
 
 
-	const foundCategory = category.find(category => category.id === toysProduct.category_id);
+	const foundCategory = category.find(category => category.id === toysProduct.id);
 	const photoBackground = "./assets/img/about-us.png"
 	console.log(toysProduct)
 
@@ -73,7 +73,7 @@ const DetailsProducts = () => {
 						<Row>
 							<Col xs={8} sm={8} md={8} lg={8} xl={8}>
 								<p className='title'>Name: </p>
-								<p className='content'>{toysProduct.product_name}</p>
+								<p className='content'>{toysProduct.name}</p>
 							</Col>
 							<Col xs={8} sm={8} md={8} lg={8} xl={8}>
 								<p className='title'>Category: </p>
@@ -81,17 +81,17 @@ const DetailsProducts = () => {
 							</Col>
 							<Col xs={8} sm={8} md={8} lg={8} xl={8}>
 								<p className='title'>Availability: </p>
-								<p className='content'>{toysProduct.product_active ? 'Yes' : 'No'}</p>
+								<p className='content'>{toysProduct.active ? 'Yes' : 'No'}</p>
 							</Col>
 						</Row>
 					</div>
 					<div className='detailsproduct'>
 						<Row>
 							<Col span={12}>
-								<img src={`/assets/img/${toysProduct.product_photo}`} alt="Product"  />	
+								<img src={`/assets/img/${toysProduct.photo}`} alt="Product"  />	
 							</Col>
 							<Col span={12}>
-								<p>{toysProduct.product_description}</p>
+								<p>{toysProduct.description}</p>
 								<Button className='button' onClick={handleOrder}>Order</Button>
 							</Col>
 						</Row>
