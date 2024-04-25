@@ -12,13 +12,13 @@ const DetailsProducts = () => {
 	const [isNoteOpen, setIsNoteOpen] = useState(false);
 
 	const location = useLocation();
-	const { id } = location.state
+	const { product_id } = location.state
 
 	const [toysProduct, setToysProduct] = useState([]);
 
 	const handleOrder = () => {
 		setIsNoteOpen(true)
-		const value = {from_name: 'user', to_name: 'Rental Toys', message:`Order product id: ${id}`}
+		const value = {from_name: 'user', to_name: 'Rental Toys', message:`Order product id: ${product_id}`}
 		EmailService.sendEmail(value);
 	}
 
@@ -37,14 +37,13 @@ const DetailsProducts = () => {
 		try {
 			const res = await fetch(`https://api-nu-green.vercel.app/products`)
 			const parseData = await res.json();
-			console.log(parseData)
-			// setToysProduct(parseData)
-			const foundProduct = parseData.find(product => product.id === id);
+
+			const foundProduct = parseData.find(product => product.id === product_id);
 
 			if (foundProduct) {
 				setToysProduct(foundProduct);
 			} else {
-				console.error(`Product with id ${id} not found.`);
+				console.error(`Product with id ${product_id} not found.`);
 			}
 		
 		} catch (err) {
@@ -54,12 +53,10 @@ const DetailsProducts = () => {
 
 	useEffect(() => {
 		getProduct();
-	  }, [id]);
+	  }, [product_id]);
 
 
 	const foundCategory = category.find(category => category.id === toysProduct.id);
-	const photoBackground = "./assets/img/about-us.png"
-	console.log(toysProduct)
 
 
 	return (
