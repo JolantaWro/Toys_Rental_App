@@ -35,10 +35,10 @@ const DetailsProducts = () => {
 
 	const getProduct = async () => {
 		try {
-			const res = await fetch("https://api-nu-green.vercel.app/products");
-
+			const res = await fetch(`https://api-nu-green.vercel.app/products`)
 			const parseData = await res.json();
 			console.log(parseData)
+			// setToysProduct(parseData)
 			const foundProduct = parseData.find(product => product.id === id);
 
 			if (foundProduct) {

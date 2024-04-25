@@ -10,11 +10,7 @@ const Rental = () => {
 
 	const getProduct = async () => {
 		try {
-            // const apiUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_VERCEL_URL : 'http://localhost:5000';
-            // const res = await fetch(`${apiUrl}/rental`);
-			
 			const res = await fetch(`https://api-nu-green.vercel.app/products`)
-			console.log(res)
 			const parseData = await res.json();
 			setToysProduct(parseData)
 		
