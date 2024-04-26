@@ -35,10 +35,10 @@ const DetailsProducts = () => {
 
 	const getProduct = async () => {
 		try {
-			const res = await fetch("http://localhost:5000/rental/");
-
+			const res = await fetch(`https://api-nu-green.vercel.app/products`)
 			const parseData = await res.json();
-			const foundProduct = parseData.find(product => product.product_id === product_id);
+
+			const foundProduct = parseData.find(product => product.id === product_id);
 
 			if (foundProduct) {
 				setToysProduct(foundProduct);
@@ -56,9 +56,7 @@ const DetailsProducts = () => {
 	  }, [product_id]);
 
 
-	const foundCategory = category.find(category => category.id === toysProduct.category_id);
-	const photoBackground = "./assets/img/about-us.png"
-	console.log(toysProduct)
+	const foundCategory = category.find(category => category.id === toysProduct.id);
 
 
 	return (
@@ -73,7 +71,7 @@ const DetailsProducts = () => {
 						<Row>
 							<Col xs={8} sm={8} md={8} lg={8} xl={8}>
 								<p className='title'>Name: </p>
-								<p className='content'>{toysProduct.product_name}</p>
+								<p className='content'>{toysProduct.name}</p>
 							</Col>
 							<Col xs={8} sm={8} md={8} lg={8} xl={8}>
 								<p className='title'>Category: </p>
@@ -81,17 +79,17 @@ const DetailsProducts = () => {
 							</Col>
 							<Col xs={8} sm={8} md={8} lg={8} xl={8}>
 								<p className='title'>Availability: </p>
-								<p className='content'>{toysProduct.product_active ? 'Yes' : 'No'}</p>
+								<p className='content'>{toysProduct.active ? 'Yes' : 'No'}</p>
 							</Col>
 						</Row>
 					</div>
 					<div className='detailsproduct'>
 						<Row>
 							<Col span={12}>
-								<img src={`/assets/img/${toysProduct.product_photo}`} alt="Product"  />	
+								<img src={`/assets/img/${toysProduct.photo}`} alt="Product"  />	
 							</Col>
 							<Col span={12}>
-								<p>{toysProduct.product_description}</p>
+								<p>{toysProduct.description}</p>
 								<Button className='button' onClick={handleOrder}>Order</Button>
 							</Col>
 						</Row>

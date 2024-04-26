@@ -10,10 +10,7 @@ const Rental = () => {
 
 	const getProduct = async () => {
 		try {
-            const apiUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_VERCEL_URL : 'http://localhost:5000';
-            const res = await fetch(`${apiUrl}/rental`);
-
-			console.log(res)
+			const res = await fetch(`https://api-nu-green.vercel.app/products`)
 			const parseData = await res.json();
 			setToysProduct(parseData)
 		
@@ -40,7 +37,7 @@ const Rental = () => {
 						{toysProduct.map((product) => (
 							<Col
 								className='rentaltoys__content'
-								key={product.product_id}
+								key={product.id}
 								xs={{
 									span: 5,
 									offset: 1,
@@ -50,16 +47,16 @@ const Rental = () => {
 									// offset: 2,
 								}}>
 								<div className=''>
-									{product.product_photo === null ? 
+									{product.photo === null ? 
 									<div className='rentaltoys__img' style={{backgroundColor: 'pink'}}></div> : 
 									
-									<div className='rentaltoys__img' style={{backgroundImage: `url(./assets/img/${product.product_photo})`}}></div>}
+									<div className='rentaltoys__img' style={{backgroundImage: `url(./assets/img/${product.photo})`}}></div>}
 
 								</div>
 								<div className='rentaltoys__content rentaltoys__title'>
-									<span>{product.product_name}</span>
+									<span>{product.name}</span>
 									<Space wrap> 
-										<Link to='/product' state={{ product_id: product.product_id }}><Button className='rentaltoys__btn'>Show details</Button></Link>
+										<Link to='/product' state={{ product_id: product.id }}><Button className='rentaltoys__btn'>Show details</Button></Link>
 									</Space>
 								</div>
 							</Col>
