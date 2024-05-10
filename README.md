@@ -10,7 +10,7 @@ The application is available at [https://toys-rental-app.vercel.app](https://toy
 
 ## Technology Stack
 - Frontend: React, React Router, Ant Design (antd) for styling
-- Backend: API hosted at `https://api-nu-green.vercel.app/`
+- Backend: API hosted at [https://api-nu-green.vercel.app](https://api-nu-green.vercel.app/)
 - APIs: EmailJS for sending emails directly from the client side
 
 ## Getting Started
