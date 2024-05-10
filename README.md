@@ -1,5 +1,5 @@
 # Toys Rental App
-Toys Rental App is a web application designed to facilitate the rental and donation of toys. It offers a platform where users can browse available toys, donate toys they no longer need, and rent toys for a specified period. The app aims to create a community-driven sharing economy around children's toys, making play accessible to more children while promoting sustainability.
+Toys Rental App is a web application designed to facilitate the rental and donation of toys. It offers a platform where users can browse available toys, donate toys they no longer need, and rent toys for a specified period. The app aims to create a community-driven sharing economy around children's toys, making play accessible to more children while promoting sustainability.\
 The application is available at `https://toys-rental-app.vercel.app/`
 
 ## Features
