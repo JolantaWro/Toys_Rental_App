@@ -3,9 +3,9 @@ Toys Rental App is a web application designed to facilitate the rental and donat
 
 ## Features
 
-1. User Authentication: Secure login and registration functionality to manage user access.
-2. Toy Catalog: Users can browse and search for toys to rent.
-3. Donate Toys: Users can list toys for donation, which are then available for other users to rent.
+- User Authentication: Secure login and registration functionality to manage user access.
+- Toy Catalog: Users can browse and search for toys to rent.
+- Donate Toys: Users can list toys for donation, which are then available for other users to rent.
 
 ## Technology Stack
 - Frontend: React, React Router, Ant Design (antd) for styling
@@ -19,10 +19,11 @@ Before running the application locally, make sure you have Node.js and npm insta
 #### `node --version`
 #### `npm --version`
 
+
 ### Installation
 1. Clone the Repository
 
-    `git clone https://github.com/JolantaWro/Toys_Rental_App.git`
+#### `git clone https://github.com/JolantaWro/Toys_Rental_App.git`
 
 2. Install dependencies
 #### `npm install`
@@ -34,4 +35,6 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
-## The application is available at  `https://toys-rental-app.vercel.app/`
+
+## The application is available at  
+#### `https://toys-rental-app.vercel.app/`
